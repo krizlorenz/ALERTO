@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ALERTO</title>
+  </head>
+  <body>
+    <div class="ticker-wrap">
+      <div class="ticker-badge">
+        <span class="live-dot"></span>
+        ADVISORY
+      </div>
+      <div class="ticker-track">
+        <span class="ticker-item">ALERTO is a web-based application that provides
+          real-time alerts and notifications for various events and emergencies.
+          Stay informed and stay safe with ALERTO.</span>
+        <span class="ticker-item">ALERTO is a web-based application that provides
+          real-time alerts and notifications for various events and emergencies.
+          Stay informed and stay safe with ALERTO.</span>
+      </div>
+    </div>
+    <div class="hero-section">
+      <img src="images/coea.png" alt="CAGAYAN STATE UNIVERSITY MAIN GATE PHOTO"
+          class="hero-image">
+      <div class="hero-gradient"></div>
+      <div class="hero-brand">
+        <img src="images/logo.png" alt="ALERTO LOGO">
+        <div class="hero-text">
+          <img src="images/logo.png" alt="ALERTO LOGO" class="hero-logo">
+          <h1>ALERTO</h1>
+        </div>
+      </div>
+
+    </div>
+
+    <section style="height: 100vh; background: white;"></section>
+
+    <script>
+      const heroSection = document.querySelector('.hero-section');
+      const heroImage = document.querySelector('.hero-image');
+
+      window.addEventListener('scroll', () => {
+        const heroHeight = heroSection.offsetHeight;
+        const scrollY = window.scrollY;
+        const progress = Math.min(scrollY / heroHeight, 1);
+        const zoomAmount = 1 + progress * 0.15;
+        heroImage.style.transform = `scale(${zoomAmount})`;
+      });
+    </script>
+  </body>
+</html>
