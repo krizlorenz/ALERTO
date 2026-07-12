@@ -1,7 +1,7 @@
 .ticker-wrap {
   background-color: rgb(178, 58, 30);
   position: fixed;
-  display: flex;
+  display: none;
   align-items: center;
   top: 0;
   left: 0;
@@ -96,24 +96,32 @@
   z-index: 2;
 }
 
-.hero-logo {
-  position: absolute;
-  display: inline-block;
-  width: 100px;
-  height: auto;
-  margin: 20px;
-  z-index: 3;
+.main-header {
+  position: fixed;
+  background: transparent;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
-.hero-text {
+.header-container {
+  position:absolute
+}
+
+.logo-container {
   display: flex;
-  font-family: 'Fraunces', serif;
-  display: inline-block;
-  font-size: 10px;
-  position: absolute;
-  text-align: left;
-  color: white;
-  margin: 20px;
-  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.logo-text {
+  color: #ccc1b1;
+  font-size: 24px;
+  font-weight: bold;
+}
