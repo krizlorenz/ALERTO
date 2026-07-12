@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .ticker-wrap {
   background-color: rgb(178, 58, 30);
   position: fixed;
@@ -58,12 +64,6 @@
   100% { transform: translateX(-50%); }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .hero-section {
   position: relative;
   width: 100%;
@@ -100,12 +100,19 @@
   position: fixed;
   background: transparent;
   top: 0;
+  padding-top: 20px;
   width: 100%;
   z-index: 10;
 }
 
 .header-container {
-  position:absolute
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-container {
@@ -116,7 +123,7 @@
 }
 
 .logo {
-  height: 80px;
+  height: 50px;
   width: auto;
 }
 
@@ -124,4 +131,48 @@
   color: #ccc1b1;
   font-size: 24px;
   font-weight: bold;
+}
+
+.navigation-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-icon {
+  color: #ccc1b1;
+  font-family: 'open sans', sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+
+.searchbar {
+  color: #ccc1b1;
+  font-family: 'open sans', sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+
+.nav-icon :hover,
+.nav-icon:active,
+.searchbar:hover {
+  color: #742020;
+}
+
+.nav-icon.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f1c40f;
 }
