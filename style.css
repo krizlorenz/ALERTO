@@ -73,12 +73,13 @@
   position: absolute;
   z-index: 3;
   color: white;
+  backdrop-filter: blur(6px);
   left: 100px;
   bottom: 60px;
   max-width: 620px;
   padding: 48px;
   background: rgba(80, 15, 25, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(216, 180, 92, 0.4);
   border-radius: 16px;
 }
 
@@ -129,21 +130,22 @@
   margin-bottom: 24px;
 }
 
-.number {
-  display: block;
-  font-family: 'fraunces', serif;
+.step .number {
+  display: flex;
+  font-family: 'jetbrains mono', monospace;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   color: #d8b45c;
   margin-bottom: 10px;
 }
 
-.step {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.step span {
+  display: block;
+  font-family: 'inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(246, 241, 230, 0.82);
 }
-
 .hero-image {
   position: absolute;
   top: 0;
@@ -201,7 +203,7 @@
 }
 
 .logo-text {
-  color: #ccc1b1;
+  color: #f6f1e6;
   padding-left: 10px;
   font-size: 24px;
   font-weight: bold;
@@ -214,9 +216,9 @@
 }
 
 .nav-icon {
-  color: #ccc1b1;
+  color: #f6f1e6;
   font-family: 'open sans', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   text-decoration: none;
   position: relative;
