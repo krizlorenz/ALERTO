@@ -36,6 +36,12 @@
           <a href="#" class="nav-icon">Contact</a>
           <a href="#" class="searchbar"><i class="fas fa-search"></i></a>
         </nav>
+
+        <button class="hamburger" id="hamburgerButton">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
@@ -84,6 +90,13 @@
         const progress = Math.min(scrollY / heroHeight, 1);
         const zoomAmount = 1 + progress * 0.15;
         heroImage.style.transform = `scale(${zoomAmount})`;
+      });
+
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const navMenu = document.querySelector('.navigation-menu');
+
+      hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
       });
     </script>
   </body>
